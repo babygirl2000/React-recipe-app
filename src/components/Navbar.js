@@ -28,7 +28,7 @@ const Navbar = () => {
     return ( 
         <>
             <div className="navbar container">
-                <a href="#!" className="logo">F<span>oo</span>diesHub</a>
+                <a href="#!" className="logo">Reci<span>pe</span>Home</a>
                 <div className="nav-links">
                     { links.map(link => (
                         <a href="#!" key={link.name}>{link.name}</a>
