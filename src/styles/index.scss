@@ -81,6 +81,7 @@ img{
         color: var(--text-color);
         font-size: 2.5em;
         margin-bottom: .25em;
+        text-transform: capitalize;
     }
     .info{
         color: var(--text-light);
@@ -109,6 +110,9 @@ img{
 // ====================== styles for Quote section ================
 
 @import "partials/quoteSection";
+// ====================== styles for chefs section ================
+
+@import "partials/chefSection";
 
 @media screen and (max-width: 700px){
     .navbar{
@@ -124,5 +128,8 @@ img{
     }
     .container{
         padding-inline:10vw ;
+    }
+    .chef-card{
+        box-shadow: 0 5px 10px var(--shadow-color);
     }
 }
