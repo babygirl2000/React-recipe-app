@@ -7,8 +7,13 @@
     --text-color:#1b1a1a;
     --text-light:#575757;
     --font-size:16px;
-    --animated-speed:1;
+    --animated-speed: 1;
 }
+
+@function getAnimationDuration($duration: number){
+    @return calc($duration + var(--animated-speed));
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -71,7 +76,73 @@ a{
             }
         }
     }
+
+    .sidebar-btn{
+        height: 20px;
+        width: 30px;
+        position: relative;
+        display: none;
+        .bar{
+            height: 4px;
+            width: 80%;
+            background-color: var(--text-color);
+            position: absolute;
+            border-radius: 7px;
+            transition: transform calc(var(--animated-speed)*0.5s) ease-in-out;
+            cursor: pointer;
+
+            &:nth-child(1){
+                top: 0;
+                transform-origin: right;
+                transform: scaleX(.9) translateY(0)
+            }
+            &:nth-child(2){
+                top: 50%;
+                transform-origin: right;
+                transform: scaleX(.7) translateY(-50%);
+                
+            }
+            &:nth-child(3){
+                top: 100%;
+                transform-origin: right;
+                transform:scaleX(1.1) translateY(-100%);
+            }
+        }
+        &.active{
+            .bar{
+                transform-origin: center;
+                top: 50%;
+                &:nth-child(1){
+                    transform:scale(1) rotate(-45deg);
+                }
+                &:nth-child(2){
+                    transform: scale(0);
+                }
+                &:nth-child(3){
+                    transform:scale(1) rotate(40deg);
+                }
+            }
+        }
+
+    }
 }
 .container{
     padding-inline: 15vw;
+}
+
+@media screen and (max-width: 700px){
+    .navbar{
+        .logo{
+            font-size: 1.2em;
+        }
+        .nav-links{
+            display: none;
+        }
+        .sidebar-btn{
+            display: block;
+        }
+    }
+    .container{
+        padding-inline:10vw ;
+    }
 }
