@@ -106,6 +106,10 @@ img{
 
 @import "partials/animation.scss";
 
+// ====================== styles for Quote section ================
+
+@import "partials/quoteSection";
+
 @media screen and (max-width: 700px){
     .navbar{
         .logo{
