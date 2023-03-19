@@ -1,3 +1,4 @@
+import { Link,useLocation } from "react-router-dom";
 import { useState } from "react";
 import Sidebar from "./Sidebar";
 import { faHome, faList, faCog } from "@fortawesome/free-solid-svg-icons";
@@ -24,14 +25,16 @@ const Navbar = () => {
     function closeSidebar(){
         setShowSidebar(false)
     }
+    const location = useLocation()
+    console.log(location)
 
     return ( 
         <>
             <div className="navbar container">
-                <a href="#!" className="logo">Reci<span>pe</span>Home</a>
+                <Link to="/" className="logo">Reci<span>pe</span>Home</Link>
                 <div className="nav-links">
                     { links.map(link => (
-                        <a href="#!" key={link.name}>{link.name}</a>
+                        <Link className={location.pathname === link.path? "active": ""} to={link.path} key={link.name}>{link.name}</Link>
                     ))}
                 </div>
 
