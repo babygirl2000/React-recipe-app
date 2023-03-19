@@ -33,9 +33,6 @@ const Navbar = () => {
                     { links.map(link => (
                         <a href="#!" key={link.name}>{link.name}</a>
                     ))}
-                    {/* <a href="#!">Home</a>
-                    <a href="#!">Recipes</a>
-                    <a href="#!">About</a> */}
                 </div>
 
                 <div 
