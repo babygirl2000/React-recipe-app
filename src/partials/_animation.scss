@@ -1,0 +1,8 @@
+@keyframes slideInLeft {
+    from{
+        transform: translate(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
