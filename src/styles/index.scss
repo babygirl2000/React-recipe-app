@@ -79,6 +79,9 @@ img{
     .col{
         width: 50%;
     }
+    &.d-block{
+        display: block;
+    }
     .title{
         color: var(--text-color);
         font-size: 2.5em;
@@ -123,6 +126,9 @@ img{
 // ====================== styles for footer section ================
 
 @import "partials/footer";
+// ====================== styles for Settings page ================
+
+@import "partials/settings";
 
 @media screen and (max-width: 1200px){
     .container{

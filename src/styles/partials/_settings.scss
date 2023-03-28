@@ -1,0 +1,52 @@
+.options-container{
+    box-shadow: 0 5px 10px var(--shadow-color);
+    padding: 1em;
+    border-radius: 5px;
+    border-left: .5em solid var(--primary-color);
+    background-color: var(--background-color);
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    gap: 1em ;
+    .option{
+        height: 3em;
+        width: 3em;
+        box-shadow: 0 3px 6px var(--shadow-color);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.light{
+            background-color: #fff;
+
+        }
+        &.dark{
+            background-color: rgb(19, 19, 19) ;
+        }
+        .check{
+            height: 2em;
+            width: 2em;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            // display: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px var(--shadow-color);
+
+            svg{
+                height: 1.3em;
+                width: 1.3em;
+            }
+        }
+    }
+    .btn span{
+        display: inline-block;
+        margin-left: .5em;
+    }
+}
+.d-block h2{
+    font-size: 1.75em;
+    color: var(--text-color)
+}
